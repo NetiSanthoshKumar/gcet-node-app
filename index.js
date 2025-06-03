@@ -11,12 +11,23 @@ app.get("/", (req, res) => {
   return res.send("Good Morning");
 });
 
+const userSchema = mongoose.Schema({
+  name:{type: String},
+});
+
+const user = mongoose.model("User",userSchema);
+
 app.get("/greet", (req, res) => {
   res.send("Greetings");
 });
 
+app.get("/register",async (req,res) => {
+  const result = await user.insertOne({name : "Jhon"});
+  return res.json(result);
+});
+
 app.get("/name", (req, res) => {
-  res.send("Praveen");
+  res.send("Santhosh");
 });
 
 app.get("/weather", (req, res) => {
