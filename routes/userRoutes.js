@@ -14,6 +14,12 @@ userRouter.post("/login", async (req, res) => {
   const result = await userModel.findOne({ email, pass });
   if (!result) return res.json({ message: "Invalid user or password" });
   return res.json(result);
+}); 
+
+userRouter.get("/:id",async(req, res) =>{
+    const email = req.params.id;
+    const result = await userModel.findOne({email});
+    return res.json(result);
 });
 
 export default userRouter
