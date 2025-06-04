@@ -1,8 +1,8 @@
-import mongoose from "mongoose";
-const ordersSchema = mongoose.Schema({
-  email:{type: String},
-  ordersValue:{type: string},
+import mongoose from 'mongoose'
+const orderSchema = mongoose.Schema({
+  email: { type: String },
+  orderValue: { type: Number },
 });
+// const product = mongoose.model("Product", productSchema);
 
-// const orders = mongoose.model("Orders",ordersSchema);
-export default mongoose.model("Orders",ordersSchema);
+export default mongoose.model("Order", orderSchema);
