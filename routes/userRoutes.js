@@ -1,3 +1,4 @@
+
 import express from "express";
 import userModel from "../models/userModel.js";
 
@@ -20,16 +21,6 @@ userRouter.post("/login", async (req, res) => {
   return res.json(result);
 });
 
-userRouter.get("/:id", async (req, res) => {
-  const email = req.params.id;
-  const result = await userModel.findOne({ email });
-  return res.json(result);
-});
 
-userRouter.get("/:id/name", async (req, res) => {
-  const email = req.params.id;
-  const result = await userModel.findOne({ email },{_id:0,name:1});
-  return res.json(result);
-});
 
 export default userRouter;
