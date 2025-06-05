@@ -11,7 +11,7 @@ import ordersRouter from "./routes/ordersRoutes.js";
 
 const DBUSER =encodeURIComponent(process.env.DBUSER)
 const DBPASS =encodeURIComponent(process.env.DBPASS)
-const MONGO_URI=`mongodb+srv://${DBUSER}:${DBPASS}@cluster0.akm34oo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
+const MONGO_URI=`mongodb+srv://${DBUSER}:${DBPASS}@cluster0.akm34oo.mongodb.net/gcet?retryWrites=true&w=majority&appName=Cluster0`
 
 const app = express();
 app.use(cors());
