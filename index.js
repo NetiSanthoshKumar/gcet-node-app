@@ -7,7 +7,11 @@ import userRouter from "./routes/userRoutes.js";
 import productRouter from "./routes/productRoutes.js";
 import ordersRouter from "./routes/ordersRoutes.js";
 
-const MONGO_URI = process.env.MONGO_URI
+//const MONGO_URI = process.env.MONGO_URI
+
+const DBUSER =encodeURIComponent(process.env.DBUSER)
+const DBPASS =encodeURIComponent(process.env.DBPASS)
+const MONGO_URI=`mongodb+srv://${DBUSER}:${DBPASS}@cluster0.akm34oo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
 
 const app = express();
 app.use(cors());
