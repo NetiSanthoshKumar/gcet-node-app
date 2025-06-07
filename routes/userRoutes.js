@@ -2,7 +2,7 @@ import express from "express";
 import userModel from "../models/userModel.js";
 import bcrypt from 'bcryptjs';
 import jwt from "jsonwebtoken";
-const SECRET_KEY ="hellowworld";
+const SECRET_KEY ="helloworld";
 const userRouter = express.Router();
 
 userRouter.post("/register", async (req, res) => {
